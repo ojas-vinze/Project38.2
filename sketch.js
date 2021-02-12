@@ -80,16 +80,16 @@ function draw() {
 
     score = score+ Math.round(getFrameRate()/60);
     
-    if(ground.x<400){
-      ground.x=ground.width/2;
+    if(trex.x>1000){
+      trex.x=55;
     }
     if(touches.length<0 || keyDown("space") && trex.y>=height-130){
-      trex.velocityY=-15;
+      trex.velocityY=-12;
       jumpsound.play();
       touches = [];
     }
     trex.velocityY=trex.velocityY+0.8;
-    trex.collide(inground); 
+    trex.collide(inground);
     
     Clouds();
     Obstacles();

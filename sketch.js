@@ -80,7 +80,7 @@ function draw() {
 
     score = score+ Math.round(getFrameRate()/60);
     
-    if(trex.x>1000){
+    if(trex.x>1100){
       trex.x=55;
     }
     if(touches.length<0 || keyDown("space") && trex.y>=height-130){

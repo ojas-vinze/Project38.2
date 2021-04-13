@@ -36,7 +36,7 @@ function setup() {
   trex = createSprite(55,height-68,20,20);
   trex.addAnimation("running",trexanimation);
   trex.addAnimation("collided",deadtrex);
-  trex.setCollider('circle',0,0,300);
+  trex.setCollider('circle',0,0,320);
   trex.scale = 0.08;
   // trex.velocityX=-(6 + 3* score/100);
   gameover = createSprite(width/2,height/2-50);
@@ -121,7 +121,7 @@ function draw() {
 }
 
 function Clouds(){
-  if(frameCount % 60 === 0){
+  if(frameCount % 5 === 0){
     cnt=cnt+150;
     var cloud = createSprite(width/2+cnt,height-300,40,10);
     cloud.y=Math.round(random(100,220))
@@ -136,7 +136,7 @@ function Clouds(){
 }
 
 function Obstacles(){
-  if(frameCount % 60 === 0){
+  if(frameCount % 10 === 0){
     cnt=cnt+30;
     rand = Math.round(random(1,2));
     cactus = createSprite(200+cnt,height-95,20,30);
